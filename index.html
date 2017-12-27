@@ -3,15 +3,39 @@
     <head>
       <title>Compass Example</title>
       <meta charset="utf-8"/>
-      <script type="text/javascript" charset="utf-8">
-window.addEventListener('deviceorientation', function(event) {
-  console.log('方角       : ' + event.alpha);
-  console.log('上下の傾き : ' + event.beta);
-  console.log('左右の傾き : ' + event.gamma);
 
-  console.log('コンパスの向き : ' + event.webkitCompassHeading);
-  console.log('コンパスの精度 : ' + event.webkitCompassAccuracy);
-});
+<!--       <script>
+        var count = 0;
+        var countup = function() {
+          console.log(count++);
+        }
+        var id = setInterval(function(){
+          countup();
+          if(count > 5){
+            clearInterval(id);　//idをclearIntervalで指定している
+          }
+        }, 2000);
+      </script> -->
+
+      <script type="text/javascript" charset="utf-8">
+        var count = 0;
+        var demo = window.addEventListener('deviceorientation', function(event) {
+          console.log(count++);
+          console.log('方角       : ' + event.alpha);
+          console.log('上下の傾き : ' + event.beta);
+          console.log('左右の傾き : ' + event.gamma);
+
+          console.log('コンパスの向き : ' + event.webkitCompassHeading);
+          console.log('コンパスの精度 : ' + event.webkitCompassAccuracy);
+        });
+
+        var id = setInterval(function(){
+          function();
+          if(count > 5){
+            clearInterval(id);　//idをclearIntervalで指定している
+          }
+        }, 2000);
+
       </script>
     </head>
     <body>
