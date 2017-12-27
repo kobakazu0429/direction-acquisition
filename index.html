@@ -5,6 +5,8 @@
       <meta charset="utf-8"/>
       <script type="text/javascript" charset="utf-8">
 window.addEventListener('deviceorientation', function(event) {
+  var fuga = event.webkitCompassAccuracy
+  console.log(fuga);
   if (event.webkitCompassAccuracy ==! "-1") {
     console.log("hoge");
   } else {
@@ -12,7 +14,7 @@ window.addEventListener('deviceorientation', function(event) {
     // console.log('上下の傾き : ' + event.beta);
     // console.log('左右の傾き : ' + event.gamma);
     console.log('コンパスの向き : ' + event.webkitCompassHeading);
-    console.log('コンパスの精度 : ' + event.webkitCompassAccuracy);
+    console.log('コンパスの精度 : ' + fuga);
   }
 });
       </script>
