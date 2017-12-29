@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compass Example</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <div id="abc"></div>
+  <button onclick="fuga()">変更</button>
+  <script type="text/javascript" charset="utf-8">
+
+
+    function fuga() {
+      var hoge = document.getElementById('abc');
+      hoge = '';
+      window.addEventListener('deviceorientation', function(event) {
+        hoge.innerHTML += '方角       : ' + event.alpha + '<br>'
+        hoge.innerHTML += 'コンパスの向き : ' + event.webkitCompassHeading + '<br>';
+        hoge.innerHTML += 'コンパスの精度 : ' + event.webkitCompassAccuracy + '<br>';
+      });
+    }
+
+  </script>
+</body>
+</html>
