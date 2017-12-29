@@ -11,7 +11,6 @@
     function fuga() {
       var hoge = document.getElementById('abc');
       window.addEventListener('deviceorientation', function(event) {
-        hoge.innerHTML += '方角       : ' + event.alpha + '<br>'
         hoge.innerHTML += 'コンパスの向き : ' + event.webkitCompassHeading + '<br>';
         hoge.innerHTML += 'コンパスの精度 : ' + event.webkitCompassAccuracy + '<br>';
       });
